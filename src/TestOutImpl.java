@@ -6,7 +6,7 @@
  *
  * $Id$
  */
-
+import RTC.Time;
 import RTC.TimedLong;
 import jp.go.aist.rtm.RTC.DataFlowComponentBase;
 import jp.go.aist.rtm.RTC.Manager;
@@ -114,6 +114,9 @@ public class TestOutImpl extends DataFlowComponentBase {
      */
     @Override
     protected ReturnCode_t onActivated(int ec_id) {
+	m_out.v.data = 1;
+	m_out.v.tm = new RTC.Time(0, 0);
+	m_outOut.write();
         return super.onActivated(ec_id);
     }
 
