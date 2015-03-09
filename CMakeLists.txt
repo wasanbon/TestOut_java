@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 
-project(TestOut Java)
+project(TestOut_java Java)
 
 set(CMAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS true)
 set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake_modules")
@@ -27,7 +27,7 @@ set(IDL_FILES ""
 )
 
 set(OTHER_SRCS CMakeLists.txt Doxyfile.in
-               RTC.xml TestOut.conf rtc.conf)
+               RTC.xml TestOut_java.conf rtc.conf)
 
 
 # check OpenRTM installed

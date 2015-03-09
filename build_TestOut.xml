@@ -1,12 +1,12 @@
 <!--
 # -*- Buildfile -*-
-# @file  build_TestOut.xml
-# @brief RTComponent makefile for "TestOut component"
+# @file  build_TestOut_java.xml
+# @brief RTComponent makefile for "TestOut_java component"
 # @date  $Date$
 #
 # $Id$
  -->
-<project name="TestOut" default="compile">
+<project name="TestOut_java" default="compile">
 	<property name="source" value="src" />
 	<property name="dest" value="bin" />
 	<property environment="env" />
