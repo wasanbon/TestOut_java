@@ -1,6 +1,6 @@
 // -*- Java -*-
 /*!
- * @file TestOutComp.java
+ * @file TestOut_javaComp.java
  * @brief Standalone component
  * @date $Date$
  *
@@ -13,18 +13,18 @@ import jp.go.aist.rtm.RTC.RTObject_impl;
 import jp.go.aist.rtm.RTC.util.Properties;
 
 /*!
- * @class TestOutComp
+ * @class TestOut_javaComp
  * @brief Standalone component Class
  *
  */
-public class TestOutComp implements ModuleInitProc {
+public class TestOut_javaComp implements ModuleInitProc {
 
     public void myModuleInit(Manager mgr) {
-      Properties prop = new Properties(TestOut.component_conf);
-      mgr.registerFactory(prop, new TestOut(), new TestOut());
+      Properties prop = new Properties(TestOut_java.component_conf);
+      mgr.registerFactory(prop, new TestOut_java(), new TestOut_java());
 
       // Create a component
-      RTObject_impl comp = mgr.createComponent("TestOut");
+      RTObject_impl comp = mgr.createComponent("TestOut_java");
       if( comp==null ) {
     	  System.err.println("Component create failed.");
     	  System.exit(0);
@@ -83,7 +83,7 @@ public class TestOutComp implements ModuleInitProc {
 
         // Set module initialization proceduer
         // This procedure will be invoked in activateManager() function.
-        TestOutComp init = new TestOutComp();
+        TestOut_javaComp init = new TestOut_javaComp();
         manager.setModuleInitProc(init);
 
         // Activate manager and register to naming service

@@ -1,6 +1,6 @@
 // -*- Java -*-
 /*!
- * @file TestOut.java
+ * @file TestOut_java.java
  * @date $Date$
  *
  * $Id$
@@ -14,16 +14,16 @@ import jp.go.aist.rtm.RTC.RegisterModuleFunc;
 import jp.go.aist.rtm.RTC.util.Properties;
 
 /*!
- * @class TestOut
+ * @class TestOut_java
  * @brief ModuleDescription
  */
-public class TestOut implements RtcNewFunc, RtcDeleteFunc, RegisterModuleFunc {
+public class TestOut_java implements RtcNewFunc, RtcDeleteFunc, RegisterModuleFunc {
 
 //  Module specification
 //  <rtc-template block="module_spec">
     public static String component_conf[] = {
-    	    "implementation_id", "TestOut",
-    	    "type_name",         "TestOut",
+    	    "implementation_id", "TestOut_java",
+    	    "type_name",         "TestOut_java",
     	    "description",       "ModuleDescription",
     	    "version",           "1.0.0",
     	    "vendor",            "ssr",
@@ -37,7 +37,7 @@ public class TestOut implements RtcNewFunc, RtcDeleteFunc, RegisterModuleFunc {
 //  </rtc-template>
 
     public RTObject_impl createRtc(Manager mgr) {
-        return new TestOutImpl(mgr);
+        return new TestOut_javaImpl(mgr);
     }
 
     public void deleteRtc(RTObject_impl rtcBase) {
@@ -46,6 +46,6 @@ public class TestOut implements RtcNewFunc, RtcDeleteFunc, RegisterModuleFunc {
     public void registerModule() {
         Properties prop = new Properties(component_conf);
         final Manager manager = Manager.instance();
-        manager.registerFactory(prop, new TestOut(), new TestOut());
+        manager.registerFactory(prop, new TestOut_java(), new TestOut_java());
     }
 }

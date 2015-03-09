@@ -1,6 +1,6 @@
 // -*- Java -*-
 /*!
- * @file  TestOutImpl.java
+ * @file  TestOut_javaImpl.java
  * @brief ModuleDescription
  * @date  $Date$
  *
@@ -15,17 +15,17 @@ import jp.go.aist.rtm.RTC.util.DataRef;
 import RTC.ReturnCode_t;
 
 /*!
- * @class TestOutImpl
+ * @class TestOut_javaImpl
  * @brief ModuleDescription
  *
  */
-public class TestOutImpl extends DataFlowComponentBase {
+public class TestOut_javaImpl extends DataFlowComponentBase {
 
   /*!
    * @brief constructor
    * @param manager Maneger Object
    */
-	public TestOutImpl(Manager manager) {  
+	public TestOut_javaImpl(Manager manager) {  
         super(manager);
         // <rtc-template block="initializer">
         m_out_val = new TimedLong();
