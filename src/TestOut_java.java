@@ -27,7 +27,7 @@ public class TestOut_java implements RtcNewFunc, RtcDeleteFunc, RegisterModuleFu
     	    "description",       "ModuleDescription",
     	    "version",           "1.0.0",
     	    "vendor",            "ssr",
-    	    "category",          "Tes",
+    	    "category",          "Test",
     	    "activity_type",     "STATIC",
     	    "max_instance",      "1",
     	    "language",          "Java",
