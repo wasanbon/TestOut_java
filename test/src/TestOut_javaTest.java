@@ -1,6 +1,6 @@
 // -*- Java -*-
 /*!
- * @file TestOut_java.java
+ * @file TestOut_javaTest.java
  * @date $Date$
  *
  * $Id$
@@ -13,32 +13,31 @@ import jp.go.aist.rtm.RTC.RtcNewFunc;
 import jp.go.aist.rtm.RTC.RegisterModuleFunc;
 import jp.go.aist.rtm.RTC.util.Properties;
 
-/**
- * TestOut_java
- * <p>
- * Test Out Component
+/*!
+ * @class TestOut_javaTest
+ * @brief Test Out Component
  */
-public class TestOut_java implements RtcNewFunc, RtcDeleteFunc, RegisterModuleFunc {
+public class TestOut_javaTest implements RtcNewFunc, RtcDeleteFunc, RegisterModuleFunc {
 
 //  Module specification
 //  <rtc-template block="module_spec">
     public static String component_conf[] = {
-            "implementation_id", "TestOut_java",
-            "type_name",         "TestOut_java",
-            "description",       "Test Out Component",
-            "version",           "1.2.2",
-            "vendor",            "Sugar Sweet Robotics",
-            "category",          "Test",
-            "activity_type",     "STATIC",
-            "max_instance",      "1",
-            "language",          "Java",
-            "lang_type",         "compile",
+    	    "implementation_id", "TestOut_javaTest",
+    	    "type_name",         "TestOut_javaTest",
+    	    "description",       "Test Out Component",
+    	    "version",           "1.2.2",
+    	    "vendor",            "Sugar Sweet Robotics",
+    	    "category",          "Test",
+    	    "activity_type",     "STATIC",
+    	    "max_instance",      "1",
+    	    "language",          "Java",
+    	    "lang_type",         "compile",
     	    ""
             };
 //  </rtc-template>
 
     public RTObject_impl createRtc(Manager mgr) {
-        return new TestOut_javaImpl(mgr);
+        return new TestOut_javaTestImpl(mgr);
     }
 
     public void deleteRtc(RTObject_impl rtcBase) {
@@ -47,6 +46,6 @@ public class TestOut_java implements RtcNewFunc, RtcDeleteFunc, RegisterModuleFu
     public void registerModule() {
         Properties prop = new Properties(component_conf);
         final Manager manager = Manager.instance();
-        manager.registerFactory(prop, new TestOut_java(), new TestOut_java());
+        manager.registerFactory(prop, new TestOut_javaTest(), new TestOut_javaTest());
     }
 }
